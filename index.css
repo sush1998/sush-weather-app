@@ -5,3 +5,13 @@ body{
     height: 100vh;
     margin: 0;
 }
+
+.card
+{
+    background-color: #222222;
+    width: 100%;
+    max-width: 400px;
+    color: #FFF;
+    padding: 2rem;
+    border-radius: 30px;
+}
