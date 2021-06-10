@@ -12,7 +12,7 @@ body{
 
 .card
 {
-    background-color: #1a1818dc;
+    background-color: #1f1e1ec9;
     width: 100%;
     max-width: 400px;
     color: #FFF;
@@ -21,18 +21,49 @@ body{
     margin: 2rem;
 }
 
-/* .search
+.search
 {
+    height: 2.5rem;
+    width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+}
 
-    .search-bar
-    {
+#search-bar
+{
+    
+    padding-left:20px ;
+    width: calc(100% - 80px);
+    height: 2rem;
+    border-radius: 21px;
+    font-size: 1rem;
+    background: #1a191970;
+    border: none 0;
+    outline: none;
+    color: #FFF;
+    font-family: inherit;
+    font-weight: 600;
+}
 
-    }
+#search-bar:hover{
+    height: 2.4rem;
+}
 
-    button
-    {
+.icon
+{
+    height: 1.5rem;
+    width: 1.5rem;
+}
 
-    }
-} */
+#btn-search
+{
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+#btn-search:hover
+{
+    height: 1.5rem;
+    width: 1.5rem;
+}
