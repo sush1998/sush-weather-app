@@ -7,6 +7,7 @@ body{
     height: 100vh;
     margin: 0;
     font-family: 'Nunito Sans', sans-serif;
+    background-image: url('https://source.unsplash.com/1600x900/?weather');
 }
 
 .card
