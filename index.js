@@ -28,10 +28,12 @@ function sortData(json)
     var countryData=json.sys.country;
     var descriptionData=json.weather[0];
     var tempData=json.main.temp;
+    var icon=json.weather[0].icon;
     var humidityData=json.main.humidity;
     var windSpeed=json.wind.speed;
 
-    return weatherReport={placeData,countryData,descriptionData,tempData,humidityData,windSpeed};
+
+    return weatherReport={placeData,countryData,descriptionData,tempData,icon,humidityData,windSpeed};
     
 
 }
@@ -39,13 +41,14 @@ function sortData(json)
 
 function displayData(weatherReport)
 {
-    var {placeData,countryData,descriptionData,tempData,humidityData,windSpeed}=weatherReport
+    var {placeData,countryData,descriptionData,tempData,icon,humidityData,windSpeed}=weatherReport
     place.innerHTML=placeData+",";
     country.innerHTML=countryData;
     temp.innerHTML=tempData;
     description.innerHTML=descriptionData.description;
     humidity.innerHTML="Humidity :"+humidityData;
     wind.innerHTML="Wind :"+windSpeed+"km/h";
+    weather_icon.src="http://openweathermap.org/img/wn/"+icon+"@2x.png";
 }
 
 function clickHandler()
