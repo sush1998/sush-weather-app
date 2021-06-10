@@ -7,15 +7,32 @@ body{
     height: 100vh;
     margin: 0;
     font-family: 'Nunito Sans', sans-serif;
-    background-image: url('https://source.unsplash.com/1600x900/?weather');
+    background-image: url('https://source.unsplash.com/1600x900/?clouds');
 }
 
 .card
 {
-    background-color: #222222;
+    background-color: #1a1818dc;
     width: 100%;
     max-width: 400px;
     color: #FFF;
     padding: 2rem;
     border-radius: 30px;
+    margin: 2rem;
 }
+
+/* .search
+{
+    display: flex;
+    justify-content: space-around;
+
+    .search-bar
+    {
+
+    }
+
+    button
+    {
+
+    }
+} */
