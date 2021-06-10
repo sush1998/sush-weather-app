@@ -12,7 +12,7 @@ body{
 
 .card
 {
-    background-color: #1f1e1ec9;
+    background-color: #6e706fc7;
     width: 100%;
     max-width: 400px;
     color: #FFF;
@@ -73,6 +73,12 @@ body{
     display: flex;
     height: 2rem;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+}
+
+.weatherIcon
+{
+    height: 3rem;
+    width: 3rem;
 }

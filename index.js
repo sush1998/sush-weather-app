@@ -61,3 +61,11 @@ function clickHandler()
 
 
 searchBtn.addEventListener("click",clickHandler);
+
+searchBar.addEventListener("keyup",function()
+{
+    if(event.key=="Enter")
+    {
+        clickHandler();
+    }
+})
