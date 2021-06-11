@@ -16,10 +16,10 @@ body{
 header{
     position: absolute;
     top:0;
-    color: black;
+    color: #FFF;
     font-size: large;
     font-weight: bolder;
-    text-shadow: 0 0 2px #FFF;
+    text-shadow: 0 0 2px black;
 }
 
 .card
