@@ -66,12 +66,11 @@ body{
 }
 .block.loading
 {
+    height: 0;
     visibility: hidden;
-    max-height: 0;
-    position: relative;
+    height: 0;
     width: 50%;
     text-align: center;
-    
 }
 
 
