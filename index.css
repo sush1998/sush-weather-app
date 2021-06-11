@@ -12,14 +12,44 @@ body{
 
 .card
 {
-    background-color: #6e706fc7;
+    background-color: #252424b6;
     width: 100%;
     max-width: 400px;
     color: #FFF;
-    padding: 2rem;
+    padding: 2rem 2rem 1rem 2rem;
     border-radius: 30px;
     margin: 2rem;
 }
+
+#errorMsg
+{
+    font-family: inherit;
+    padding-left: 30px;
+    visibility: visible;
+    height: 10px;
+    font-size: 12px;
+    color: rgb(247, 95, 95);
+}
+
+.block
+{
+    display: flex;
+    
+}
+
+.block2
+{
+    margin: 20px;
+    justify-content: flex-start;
+    width:50%;
+}
+
+.block2>div
+{
+    padding: 5px;
+}
+
+
 
 .search
 {
@@ -29,6 +59,21 @@ body{
     justify-content: space-around;
     align-items: center;
 }
+.weather
+{
+    width: 50%;
+    text-align: center;
+}
+.block.loading
+{
+    visibility: hidden;
+    max-height: 0;
+    position: relative;
+    width: 50%;
+    text-align: center;
+    
+}
+
 
 #search-bar
 {
@@ -73,8 +118,15 @@ body{
     display: flex;
     height: 2rem;
     width: 100%;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    font-size: small;
+}
+
+#temp
+{
+    font-size: 3rem;
+    font-weight: 800;
 }
 
 .weatherIcon
