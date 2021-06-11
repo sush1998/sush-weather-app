@@ -12,6 +12,8 @@ const searchBar=document.querySelector("#search-bar");
 const weatherCard=document.querySelector(".block");
 const errorMsg=document.querySelector("#errorMsg");
 const pressure=document.querySelector("#pressure");
+const sunrise=document.querySelector("#sunrise");
+const sunset=document.querySelector("#sunset");
 
 
 function fetchWeather(city)
@@ -31,6 +33,11 @@ function errorHandler(error)
     errorMsg.innerHTML="No Data Found";
 }
 
+function getTime(sec)
+{
+    return new Date(sec*100).toLocaleTimeString();
+}
+
 function sortData(json)
 {
     var placeData=json.name;
@@ -41,8 +48,9 @@ function sortData(json)
     var humidityData=json.main.humidity;
     var windSpeed=json.wind.speed;
     var pressureData=json.main.pressure;
-
-    return weatherReport={placeData,countryData,descriptionData,tempData,icon,humidityData,windSpeed,pressureData};
+    var sunriseData=getTime(json.sys.sunrise);
+    var sunsetData=getTIme(json.sys.sunset);
+    return weatherReport={placeData,countryData,descriptionData,tempData,icon,humidityData,windSpeed,pressureData,sunriseData,sunsetData};
     
 
 }
@@ -50,7 +58,7 @@ function sortData(json)
 
 function displayData(weatherReport)
 {
-    var {placeData,countryData,descriptionData,tempData,icon,humidityData,windSpeed,pressureData}=weatherReport
+    var {placeData,countryData,descriptionData,tempData,icon,humidityData,windSpeed,pressureData,sunriseData,sunsetData}=weatherReport
     place.innerHTML=placeData+",";
     country.innerHTML=countryData;
     temp.innerHTML=tempData;
@@ -58,6 +66,8 @@ function displayData(weatherReport)
     humidity.innerHTML="Humidity : "+humidityData;
     wind.innerHTML="Wind : "+windSpeed+" km/h";
     pressure.innerHTML="Pressure : "+pressureData;
+    sunrise.innerHTML=sunriseData;
+    sunset.innerHTML=sunsetData;
     weather_icon.src="http://openweathermap.org/img/wn/"+icon+"@2x.png";
     weatherCard.classList.remove("loading");
 }
