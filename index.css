@@ -10,6 +10,15 @@ body{
     background-image: url('https://source.unsplash.com/1600x900/?clouds'); */
 }
 
+header{
+    position: absolute;
+    top:0;
+    color: black;
+    font-size: large;
+    font-weight: bolder;
+    text-shadow: 0 0 2px #FFF;
+}
+
 .card
 {
     background-color: #252424b6;
@@ -146,8 +155,9 @@ body{
     .card{
         width: 100%;
     }
-    .block
+    .block.loading
     {
+        visibility: hidden;
         display: flex;
         flex-direction: column;
         justify-content: center;
