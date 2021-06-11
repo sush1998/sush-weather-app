@@ -9,7 +9,8 @@ const humidity=document.querySelector("#humidity");
 const wind=document.querySelector("#wind");
 const searchBtn=document.querySelector(".icon");
 const searchBar=document.querySelector("#search-bar");
-const weatherCard=document.querySelector(".weather");
+const weatherCard=document.querySelector(".block");
+const errorMsg=document.querySelector("#errorMsg");
 
 
 function fetchWeather(city)
@@ -20,8 +21,14 @@ function fetchWeather(city)
         +apikey)
         .then(response=>response.json())
         .then(data=>displayData(sortData(data)))
+        .catch(errorHandler)
 }
 
+function errorHandler(error)
+{
+    console.log(error);
+    errorMsg.innerHTML="No Data Found";
+}
 
 function sortData(json)
 {
@@ -57,7 +64,19 @@ function clickHandler()
 {
     console.log("clicked");
     const city=searchBar.value;
-    fetchWeather(city);
+    if(city=="")
+    {
+        errorMsg.innerHTML="Please enter city name."
+        weatherCard.classList.add("loading");  
+    }
+    else
+    {
+        errorMsg.innerHTML=""   
+        fetchWeather(city);
+    }
+    
+
+    
 }
 
 

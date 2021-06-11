@@ -14,21 +14,32 @@
     <title>Weather-app</title>
 </head>
 <body>
+    
     <div class="card">
+        
         <div class="search">
             <input type="text" id="search-bar" placeholder="Search city">
             <div class=icon><i id="btn-search" class="fas fa-search"></i></div>
         </div>
-        <div class="weather loading">
-            <h2 ><span id="place"></span><span id="country"></span></h2>
-            <div class="details">   
-                <img src="" alt="" class="weatherIcon">
-                <div><span id="description"></span></div>
+        <span id="errorMsg"></span>
+        <div class="block">
+            <div class="weather loading">
+                <h2 ><span id="place"></span><span id="country"></span></h2>
+                <div id="temp"></div>
+                <div class="details">   
+                    <img src="" class="weatherIcon">
+                    <div><span id="description"></span></div>
+                </div>
+                
+                
             </div>
-            <h1 id="temp"></h1>
-            <div id="humidity"></div>
-            <div id="wind"></div>
+            <div class="block2">
+                <div id="humidity"></div>
+                <div id="wind"></div>
+            </div>
         </div>
+        
+       
     </div>
     <script src="index.js"></script>
 </body>

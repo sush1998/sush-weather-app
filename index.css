@@ -21,6 +21,36 @@ body{
     margin: 2rem;
 }
 
+#errorMsg
+{
+    font-family: inherit;
+    padding-left: 20px;
+    visibility: visible;
+    height: 10px;
+    font-size: 12px;
+    color: rgb(247, 95, 95);
+}
+
+.block
+{
+    display: flex;
+    
+}
+
+.block2
+{
+    margin: 20px;
+    justify-content: flex-start;
+    width:50%;
+}
+
+.block2>div
+{
+    padding: 5px;
+}
+
+
+
 .search
 {
     height: 2.5rem;
@@ -29,25 +59,22 @@ body{
     justify-content: space-around;
     align-items: center;
 }
-
-.weather.loading
+.weather
+{
+    width: 50%;
+    text-align: center;
+}
+.block.loading
 {
     visibility: hidden;
     max-height: 0;
     position: relative;
+    width: 50%;
+    text-align: center;
     
 }
 
 
-.weather.loading::after
-{
-    visibility: visible;
-    max-height: 20px;
-    content: "Loading...";
-    color: #FFF;
-    top: 0;
-    position: absolute;
-}
 #search-bar
 {
     
@@ -91,8 +118,15 @@ body{
     display: flex;
     height: 2rem;
     width: 100%;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    font-size: small;
+}
+
+#temp
+{
+    font-size: 3rem;
+    font-weight: 800;
 }
 
 .weatherIcon
