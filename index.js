@@ -33,10 +33,7 @@ function errorHandler(error)
     errorMsg.innerHTML="No Data Found";
 }
 
-function getTime(sec)
-{
-    return new Date(sec*100).toLocaleTimeString();
-}
+
 
 function sortData(json)
 {
@@ -49,10 +46,15 @@ function sortData(json)
     var windSpeed=json.wind.speed;
     var pressureData=json.main.pressure;
     var sunriseData=getTime(json.sys.sunrise);
-    var sunsetData=getTIme(json.sys.sunset);
+    var sunsetData=getTime(json.sys.sunset);
     return weatherReport={placeData,countryData,descriptionData,tempData,icon,humidityData,windSpeed,pressureData,sunriseData,sunsetData};
     
 
+}
+
+function getTime(sec)
+{
+    return new Date(sec*100).toLocaleTimeString();
 }
 
 
