@@ -6,6 +6,7 @@ body{
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
     font-family: 'Nunito Sans', sans-serif;
     background-image: url('https://source.unsplash.com/1600x900/?clouds'); */
 }
