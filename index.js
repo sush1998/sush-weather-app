@@ -68,8 +68,8 @@ function displayData(weatherReport)
     humidity.innerHTML="Humidity : "+humidityData;
     wind.innerHTML="Wind : "+windSpeed+" km/h";
     pressure.innerHTML="Pressure : "+pressureData;
-    sunrise.innerHTML=sunriseData;
-    sunset.innerHTML=sunsetData;
+    sunrise.innerHTML="Sunrise : "+sunriseData;
+    sunset.innerHTML="Sunset : "+sunsetData;
     weather_icon.src="http://openweathermap.org/img/wn/"+icon+"@2x.png";
     weatherCard.classList.remove("loading");
 }
@@ -103,4 +103,5 @@ searchBar.addEventListener("keyup",function()
     {
         clickHandler();
     }
+
 })
