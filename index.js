@@ -9,6 +9,7 @@ const humidity=document.querySelector("#humidity");
 const wind=document.querySelector("#wind");
 const searchBtn=document.querySelector(".icon");
 const searchBar=document.querySelector("#search-bar");
+const weatherCard=document.querySelector(".weather");
 
 
 function fetchWeather(city)
@@ -49,6 +50,7 @@ function displayData(weatherReport)
     humidity.innerHTML="Humidity :"+humidityData;
     wind.innerHTML="Wind :"+windSpeed+"km/h";
     weather_icon.src="http://openweathermap.org/img/wn/"+icon+"@2x.png";
+    weatherCard.classList.remove("loading");
 }
 
 function clickHandler()

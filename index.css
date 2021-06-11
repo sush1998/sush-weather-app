@@ -12,7 +12,7 @@ body{
 
 .card
 {
-    background-color: #6e706fc7;
+    background-color: #252424b6;
     width: 100%;
     max-width: 400px;
     color: #FFF;
@@ -30,6 +30,24 @@ body{
     align-items: center;
 }
 
+.weather.loading
+{
+    visibility: hidden;
+    max-height: 0;
+    position: relative;
+    
+}
+
+
+.weather.loading::after
+{
+    visibility: visible;
+    max-height: 20px;
+    content: "Loading...";
+    color: #FFF;
+    top: 0;
+    position: absolute;
+}
 #search-bar
 {
     
