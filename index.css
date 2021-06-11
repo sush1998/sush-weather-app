@@ -134,3 +134,9 @@ body{
     height: 3rem;
     width: 3rem;
 }
+
+.block2>span
+{
+    font-family: inherit;
+    font-weight: 400;;
+}
