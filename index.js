@@ -11,6 +11,7 @@ const searchBtn=document.querySelector(".icon");
 const searchBar=document.querySelector("#search-bar");
 const weatherCard=document.querySelector(".block");
 const errorMsg=document.querySelector("#errorMsg");
+const pressure=document.querySelector("#pressure");
 
 
 function fetchWeather(city)
@@ -39,9 +40,9 @@ function sortData(json)
     var icon=json.weather[0].icon;
     var humidityData=json.main.humidity;
     var windSpeed=json.wind.speed;
+    var pressureData=json.main.pressure;
 
-
-    return weatherReport={placeData,countryData,descriptionData,tempData,icon,humidityData,windSpeed};
+    return weatherReport={placeData,countryData,descriptionData,tempData,icon,humidityData,windSpeed,pressureData};
     
 
 }
@@ -49,13 +50,14 @@ function sortData(json)
 
 function displayData(weatherReport)
 {
-    var {placeData,countryData,descriptionData,tempData,icon,humidityData,windSpeed}=weatherReport
+    var {placeData,countryData,descriptionData,tempData,icon,humidityData,windSpeed,pressureData}=weatherReport
     place.innerHTML=placeData+",";
     country.innerHTML=countryData;
     temp.innerHTML=tempData;
     description.innerHTML=descriptionData.description;
-    humidity.innerHTML="Humidity :"+humidityData;
-    wind.innerHTML="Wind :"+windSpeed+"km/h";
+    humidity.innerHTML="Humidity : "+humidityData;
+    wind.innerHTML="Wind : "+windSpeed+" km/h";
+    pressure.innerHTML="Pressure : "+pressureData;
     weather_icon.src="http://openweathermap.org/img/wn/"+icon+"@2x.png";
     weatherCard.classList.remove("loading");
 }
