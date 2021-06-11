@@ -146,12 +146,26 @@ body{
     .card{
         width: 100%;
     }
-    .block , .block2
+    .block
     {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .block
+    {
+        display: inline;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        
+    }
+    .block>div
+    {
+        width: 100%;
     }
 
     .details
