@@ -5,6 +5,8 @@ A vanillaJS webapp  to fetch the weather of any city in the world using  OpenWea
 
 2. Basic error handling
 
+3. Changes background image on Weather result
+
 
 # api used
  Weather data - https://openweathermap.org/current
